@@ -26,6 +26,7 @@ public slots:
     void movep7();
     void movep8();
     void newP();
+    void low();
 
 public:
     explicit MainWindow(QWidget *parent , Start &start);

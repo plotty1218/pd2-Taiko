@@ -9,7 +9,7 @@ Dialog::Dialog(QWidget *parent,Start &start,MainWindow &newgame) :
 {
     ui->setupUi(this);
     ui->score->setText(QString::number(newgame.score));
-    if(newgame.score>3){
+    if(newgame.score>=8){
         ui->highscore->move(QPoint(160,110));
         ui->highscore2->move(QPoint(0,0));
     }else{
@@ -25,9 +25,7 @@ Dialog::~Dialog()
 
 void Dialog::on_pushButton_2_clicked()
 {
-    this->close();
     w.stopgame();
-    w.close();
 }
 
 void Dialog::on_pushButton_clicked()
@@ -36,4 +34,8 @@ void Dialog::on_pushButton_clicked()
     n.show();
     w.stopgame();
 
+}
+void Dialog::closeEvent(QCloseEvent *event)
+{
+    w.stopgame();
 }

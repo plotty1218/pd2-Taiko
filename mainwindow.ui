@@ -259,6 +259,79 @@
      <pixmap resource="pics.qrc">:/pics/未命名f.png</pixmap>
     </property>
    </widget>
+   <widget class="QLabel" name="baby">
+    <property name="geometry">
+     <rect>
+      <x>595</x>
+      <y>244</y>
+      <width>161</width>
+      <height>170</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="pics.qrc">:/pics/little.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="babysays">
+    <property name="geometry">
+     <rect>
+      <x>595</x>
+      <y>250</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>AR JULIAN</family>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Mom!</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="babysays2">
+    <property name="geometry">
+     <rect>
+      <x>595</x>
+      <y>290</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>AR JULIAN</family>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>I'm hungry!＞</string>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>lblnumber</zorder>
+   <zorder>p1</zorder>
+   <zorder>p2</zorder>
+   <zorder>p3</zorder>
+   <zorder>p4</zorder>
+   <zorder>p5</zorder>
+   <zorder>p6</zorder>
+   <zorder>p7</zorder>
+   <zorder>p8</zorder>
+   <zorder>score</zorder>
+   <zorder>label_3</zorder>
+   <zorder>baby</zorder>
+   <zorder>babysays</zorder>
+   <zorder>babysays2</zorder>
+   <zorder>news</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
