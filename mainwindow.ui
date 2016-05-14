@@ -18,7 +18,7 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>595</width>
+    <width>10000</width>
     <height>412</height>
    </size>
   </property>
@@ -241,6 +241,22 @@
     </property>
     <property name="text">
      <string>SCORE : </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="news">
+    <property name="geometry">
+     <rect>
+      <x>595</x>
+      <y>244</y>
+      <width>341</width>
+      <height>170</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="pics.qrc">:/pics/未命名f.png</pixmap>
     </property>
    </widget>
   </widget>

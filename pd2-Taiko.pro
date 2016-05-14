@@ -35,4 +35,5 @@ DISTFILES += \
     Â²³ø1.jpg
 
 RESOURCES += \
+    pics.qrc \
     pics.qrc

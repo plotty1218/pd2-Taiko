@@ -60,7 +60,6 @@ MainWindow::MainWindow(QWidget *parent, Start &start) :
     timer_new->setInterval((rand()%2)*1000);
     connect(timer_new,SIGNAL(timeout()),this,SLOT(newP()));
     timer_new->start();
-
 }
 
 MainWindow::~MainWindow()
@@ -76,14 +75,26 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
             int x_5 = ui->p5->x();
             if(x_1<140 && x_1>130){
                 timer_move1->stop();
-                ui->p1->move(QPoint(500,100));
+                ui->p1->move(QPoint(595,145));
+                delete timer_move1;
+                x1=595;
+                av1=true;
                 score++;
                 ui->score->setText(QString::number(score));
+                if(score>3){
+                    ui->news->move(QPoint(259,244));
+                }
             }else if(x_5<140 && x_5>130){
                 timer_move5->stop();
-                ui->p5->move(QPoint(500,100));
+                ui->p5->move(QPoint(595,145));
+                delete timer_move5;
+                x5=595;
+                av5=true;
                 score++;
                 ui->score->setText(QString::number(score));
+                if(score>3){
+                    ui->news->move(QPoint(259,244));
+                }
             }
             break;
         }
@@ -92,14 +103,26 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
             int x_6=ui->p6->x();
             if(x_2<140 && x_2>130){
                 timer_move2->stop();
-                ui->p2->move(QPoint(500,100));
+                ui->p2->move(QPoint(595,145));
+                delete timer_move2;
+                x2=595;
+                av2=true;
                 score++;
                 ui->score->setText(QString::number(score));
+                if(score>3){
+                    ui->news->move(QPoint(259,244));
+                }
             }else if(x_6<140 && x_6>130){
                 timer_move6->stop();
-                ui->p6->move(QPoint(500,100));
+                ui->p6->move(QPoint(595,145));
+                delete timer_move6;
+                x6=595;
+                av6=true;
                 score++;
                 ui->score->setText(QString::number(score));
+                if(score>3){
+                    ui->news->move(QPoint(259,244));
+                }
             }
             break;
         }
@@ -108,14 +131,26 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
             int x_7=ui->p7->x();
             if(x_3<140 && x_3>130){
                 timer_move3->stop();
-                ui->p3->move(QPoint(500,100));
+                ui->p3->move(QPoint(595,145));
+                delete timer_move3;
+                x3=595;
+                av3=true;
                 score++;
                 ui->score->setText(QString::number(score));
+                if(score>3){
+                    ui->news->move(QPoint(259,244));
+                }
             }else if(x_7<140 && x_7>130){
                 timer_move7->stop();
-                ui->p7->move(QPoint(500,100));
+                ui->p7->move(QPoint(595,145));
+                delete timer_move7;
+                x7=595;
+                av7=true;
                 score++;
                 ui->score->setText(QString::number(score));
+                if(score>3){
+                    ui->news->move(QPoint(259,244));
+                }
             }
             break;
         }
@@ -124,14 +159,26 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
             int x_8=ui->p8->x();
             if(x_4<140 && x_4>130){
                 timer_move4->stop();
-                ui->p4->move(QPoint(500,100));
+                ui->p4->move(QPoint(595,145));
+                delete timer_move4;
+                x4=595;
+                av4=true;
                 score++;
                 ui->score->setText(QString::number(score));
+                if(score>3){
+                    ui->news->move(QPoint(259,244));
+                }
             }else if(x_8<140 && x_8>130){
                 timer_move8->stop();
-                ui->p8->move(QPoint(500,100));
+                ui->p8->move(QPoint(595,145));
+                delete timer_move8;
+                x8=595;
+                av8=true;
                 score++;
                 ui->score->setText(QString::number(score));
+                if(score>3){
+                    ui->news->move(QPoint(259,244));
+                }
             }
             break;
         }
@@ -145,6 +192,22 @@ void MainWindow::timer_timeout()
     if(cnt==0)
     {
         timer_count->stop();
+        if(timer_move1->isActive()){
+        timer_move1->stop();}
+        if(timer_move2->isActive()){
+        timer_move2->stop();}
+        if(timer_move3->isActive()){
+        timer_move3->stop();}
+        if(timer_move4->isActive()){
+        timer_move4->stop();}
+        if(timer_move5->isActive()){
+        timer_move5->stop();}
+        if(timer_move6->isActive()){
+        timer_move6->stop();}
+        if(timer_move7->isActive()){
+        timer_move7->stop();}
+        if(timer_move8->isActive()){
+        timer_move8->stop();}
         cnt=30;
         dialog = new Dialog(this,w,*this);
         dialog -> show();
@@ -160,7 +223,10 @@ void MainWindow::movep1()
     {
         timer_move1->stop();
         ui-> p1 -> move(QPoint(595,y));
+        delete timer_move1;
+        x1=595;
         av1=true;
+
     }
 }
 void MainWindow::movep2()
@@ -171,6 +237,8 @@ void MainWindow::movep2()
     {
         timer_move2->stop();
         ui-> p2 -> move(QPoint(595,y));
+        delete timer_move2;
+        x2=595;
         av2=true;
     }
 }
@@ -182,6 +250,8 @@ void MainWindow::movep3()
     {
         timer_move3->stop();
         ui-> p3 -> move(QPoint(595,y));
+        delete timer_move3;
+        x3=595;
         av3=true;
     }
 }
@@ -193,6 +263,8 @@ void MainWindow::movep4()
     {
         timer_move4->stop();
         ui-> p4 -> move(QPoint(595,y));
+        delete timer_move4;
+        x4=595;
         av4=true;
     }
 }
@@ -204,6 +276,8 @@ void MainWindow::movep5()
     {
         timer_move5->stop();
         ui-> p5 -> move(QPoint(595,y));
+        delete timer_move5;
+        x5=595;
         av5=true;
     }
 }
@@ -215,6 +289,8 @@ void MainWindow::movep6()
     {
         timer_move6->stop();
         ui-> p6 -> move(QPoint(595,y));
+        delete timer_move6;
+        x6=595;
         av6=true;
     }
 }
@@ -226,6 +302,8 @@ void MainWindow::movep7()
     {
         timer_move7->stop();
         ui-> p7 -> move(QPoint(595,y));
+        delete timer_move7;
+        x7=595;
         av7=true;
     }
 }
@@ -237,6 +315,8 @@ void MainWindow::movep8()
     {
         timer_move8->stop();
         ui-> p8 -> move(QPoint(595,y));
+        delete timer_move8;
+        x8=595;
         av8=true;
     }
 }

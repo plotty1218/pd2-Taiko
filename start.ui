@@ -85,7 +85,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="pics.qrc">:/簡報1.jpg</pixmap>
+     <pixmap resource="pics.qrc">:/pics/簡報1.jpg</pixmap>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">

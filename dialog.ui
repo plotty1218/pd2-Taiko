@@ -143,7 +143,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="pics.qrc">:/pics/Taiko/簡報1.png</pixmap>
+    <pixmap resource="pics.qrc">:/pics/簡報1.png</pixmap>
    </property>
    <property name="indent">
     <number>-1</number>
@@ -203,7 +203,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="pics.qrc">:/pics/Taiko/簡報2.png</pixmap>
+    <pixmap resource="pics.qrc">:/pics/簡報2.png</pixmap>
    </property>
   </widget>
   <zorder>lowscore2</zorder>
