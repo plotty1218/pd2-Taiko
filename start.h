@@ -17,16 +17,14 @@ public:
     explicit Start(QWidget *parent = 0);
     ~Start();
     void stopgame();
-    MainWindow *newgame;
 
 private slots:
     void on_pushButton_clicked();
-
     void on_pushButton_2_clicked();
 
 private:
     Ui::Start *ui;
-
+    MainWindow *newgame;
 };
 
 #endif // START_H

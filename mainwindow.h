@@ -16,7 +16,13 @@ class MainWindow : public QMainWindow
 
 friend class Dialog;
 
-public slots:
+public:
+    explicit MainWindow(QWidget *parent , Start &start);
+    ~MainWindow();
+    void closeEvent(QCloseEvent *event);
+
+private slots:
+    void timer_timeout();
     void movep1();
     void movep2();
     void movep3();
@@ -27,15 +33,6 @@ public slots:
     void movep8();
     void newP();
     void low();
-
-public:
-    explicit MainWindow(QWidget *parent , Start &start);
-    ~MainWindow();
-    void closeEvent(QCloseEvent *event);
-
-private slots:
-    void timer_timeout();
-
 
 private:
     int cnt;
