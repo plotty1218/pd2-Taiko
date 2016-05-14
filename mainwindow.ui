@@ -316,6 +316,47 @@
      <string>I'm hungry!＞</string>
     </property>
    </widget>
+   <widget class="QLabel" name="yummy">
+    <property name="geometry">
+     <rect>
+      <x>595</x>
+      <y>10</y>
+      <width>101</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>AR JULIAN</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="pics.qrc">:/pics/yummy.png</pixmap>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="oops">
+    <property name="geometry">
+     <rect>
+      <x>595</x>
+      <y>10</y>
+      <width>101</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="pics.qrc">:/pics/opps.png</pixmap>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>lblnumber</zorder>
    <zorder>p1</zorder>
@@ -332,6 +373,8 @@
    <zorder>babysays</zorder>
    <zorder>babysays2</zorder>
    <zorder>news</zorder>
+   <zorder>yummy</zorder>
+   <zorder>oops</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

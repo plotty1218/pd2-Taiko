@@ -33,6 +33,8 @@ private slots:
     void movep8();
     void newP();
     void low();
+    void yummyDisappear();
+    void oopsDisappear();
 
 private:
     int cnt;

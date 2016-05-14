@@ -19,6 +19,8 @@ QTimer *timer_move7;
 QTimer *timer_move8;
 QTimer *timer_new;
 QTimer *timer_20;
+QTimer *timer_yummy;
+QTimer *timer_oops;
 
 MainWindow::MainWindow(QWidget *parent, Start &start) :
     QMainWindow(parent),
@@ -58,7 +60,7 @@ MainWindow::MainWindow(QWidget *parent, Start &start) :
 
 
     timer_new = new QTimer(this);
-    timer_new->setInterval((rand()%2)*1000+500);
+    timer_new->setInterval((rand()%2)*800+200);
     connect(timer_new,SIGNAL(timeout()),this,SLOT(newP()));
     timer_new->start();
 
@@ -66,6 +68,13 @@ MainWindow::MainWindow(QWidget *parent, Start &start) :
     timer_20->setInterval(20000);
     connect(timer_20,SIGNAL(timeout()),this,SLOT(low()));
     timer_20->start();
+
+    timer_yummy = new QTimer(this);
+    timer_yummy->setInterval(500);
+    connect(timer_yummy,SIGNAL(timeout()),this,SLOT(yummyDisappear()));
+    timer_oops = new QTimer(this);
+    timer_oops->setInterval(500);
+    connect(timer_oops,SIGNAL(timeout()),this,SLOT(oopsDisappear()));
 }
 
 MainWindow::~MainWindow()
@@ -86,6 +95,11 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
                 timer_move1=NULL;
                 x1=595;
                 av1=true;
+                ui->yummy->move(QPoint(210,10));
+                if(timer_yummy->isActive()){
+                    timer_yummy->stop();
+                }
+                timer_yummy->start();
                 score++;
                 ui->score->setText(QString::number(score));
                 if(score>=8){
@@ -98,11 +112,22 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
                 timer_move5=NULL;
                 x5=595;
                 av5=true;
+                ui->yummy->move(QPoint(210,10));
+                if(timer_yummy->isActive()){
+                    timer_yummy->stop();
+                }
+                timer_yummy->start();
                 score++;
                 ui->score->setText(QString::number(score));
                 if(score>=8){
                     ui->news->move(QPoint(259,244));
                 }
+            }else{
+                ui->oops->move(QPoint(210,10));
+                if(timer_oops->isActive()){
+                    timer_oops->stop();
+                }
+                timer_oops->start();
             }
             break;
         }
@@ -116,6 +141,11 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
                 timer_move2=NULL;
                 x2=595;
                 av2=true;
+                ui->yummy->move(QPoint(210,10));
+                if(timer_yummy->isActive()){
+                    timer_yummy->stop();
+                }
+                timer_yummy->start();
                 score++;
                 ui->score->setText(QString::number(score));
                 if(score>=8){
@@ -128,11 +158,22 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
                 timer_move6=NULL;
                 x6=595;
                 av6=true;
+                ui->yummy->move(QPoint(210,10));
+                if(timer_yummy->isActive()){
+                    timer_yummy->stop();
+                }
+                timer_yummy->start();
                 score++;
                 ui->score->setText(QString::number(score));
                 if(score>=8){
                     ui->news->move(QPoint(259,244));
                 }
+            }else{
+                ui->oops->move(QPoint(210,10));
+                if(timer_oops->isActive()){
+                    timer_oops->stop();
+                }
+                timer_oops->start();
             }
             break;
         }
@@ -146,6 +187,11 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
                 timer_move3=NULL;
                 x3=595;
                 av3=true;
+                ui->yummy->move(QPoint(210,10));
+                if(timer_yummy->isActive()){
+                    timer_yummy->stop();
+                }
+                timer_yummy->start();
                 score++;
                 ui->score->setText(QString::number(score));
                 if(score>=8){
@@ -158,11 +204,22 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
                 timer_move7=NULL;
                 x7=595;
                 av7=true;
+                ui->yummy->move(QPoint(210,10));
+                if(timer_yummy->isActive()){
+                    timer_yummy->stop();
+                }
+                timer_yummy->start();
                 score++;
                 ui->score->setText(QString::number(score));
                 if(score>=8){
                     ui->news->move(QPoint(259,244));
                 }
+            }else{
+                ui->oops->move(QPoint(210,10));
+                if(timer_oops->isActive()){
+                    timer_oops->stop();
+                }
+                timer_oops->start();
             }
             break;
         }
@@ -176,6 +233,11 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
                 timer_move4=NULL;
                 x4=595;
                 av4=true;
+                ui->yummy->move(QPoint(210,10));
+                if(timer_yummy->isActive()){
+                    timer_yummy->stop();
+                }
+                timer_yummy->start();
                 score++;
                 ui->score->setText(QString::number(score));
                 if(score>=8){
@@ -188,11 +250,22 @@ void MainWindow::keyPressEvent(QKeyEvent * event)
                 timer_move8=NULL;
                 x8=595;
                 av8=true;
+                ui->yummy->move(QPoint(210,10));
+                if(timer_yummy->isActive()){
+                    timer_yummy->stop();
+                }
+                timer_yummy->start();
                 score++;
                 ui->score->setText(QString::number(score));
                 if(score>=8){
                     ui->news->move(QPoint(259,244));
                 }
+            }else{
+                ui->oops->move(QPoint(210,10));
+                if(timer_oops->isActive()){
+                    timer_oops->stop();
+                }
+                timer_oops->start();
             }
             break;
         }
@@ -205,6 +278,17 @@ void MainWindow::low(){
         ui->babysays2->move(QPoint(270,290));
     }
 }
+
+void MainWindow::yummyDisappear()
+{
+    ui->yummy->move(QPoint(595,10));
+}
+
+void MainWindow::oopsDisappear()
+{
+    ui->oops->move(QPoint(595,10));
+}
+
 void MainWindow::timer_timeout()
 {
     --cnt;
