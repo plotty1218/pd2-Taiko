@@ -60,7 +60,7 @@ MainWindow::MainWindow(QWidget *parent, Start &start) :
 
 
     timer_new = new QTimer(this);
-    timer_new->setInterval((rand()%2)*800+200);
+    timer_new->setInterval((rand()%2)*800+500);
     connect(timer_new,SIGNAL(timeout()),this,SLOT(newP()));
     timer_new->start();
 
